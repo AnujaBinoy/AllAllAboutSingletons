@@ -1,4 +1,8 @@
-
+/**
+ * Simple singleton, no matter early or lazy initialization, is not thread safe.
+ * Synchronized keyword makes one thread to wait till the other one is done working
+ * with the singleton class
+ */
 
 public class SynchronizedSingleton {
 
@@ -7,7 +11,7 @@ public class SynchronizedSingleton {
     private SynchronizedSingleton(){
         System.out.println("Creation happens only once");
     }
-
+    //The only difference is the synchronized keyword
     static synchronized SynchronizedSingleton getInstance(){
         if(synchronizedSingleton == null){
             synchronizedSingleton = new SynchronizedSingleton();
