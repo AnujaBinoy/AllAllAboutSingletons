@@ -23,4 +23,9 @@ public class SimpleSingleton {
         }
         return simpleSingleton;
     }
+
+    public static void main(String[] args) {
+        SimpleSingleton simpleSingleton = SimpleSingleton.getInstance();
+        SimpleSingleton simpleSingleton1 = SimpleSingleton.getInstance();
+    }
 }
